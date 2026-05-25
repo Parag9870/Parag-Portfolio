@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parag | Data Analyst Portfolio</title>
+    <meta
+      name="description"
+      content="Parag's data analyst portfolio featuring business analytics projects, dashboards, SQL, Python, Excel, and BI storytelling."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Parag portfolio home">
+        <span class="brand-mark">P</span>
+        <span>Parag</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Data Analyst Portfolio</p>
+          <h1>Parag turns messy business data into decisions leaders can act on.</h1>
+          <p class="hero-text">
+            SQL, Python, Excel, and BI dashboards for revenue growth, churn prevention,
+            marketing performance, supply chain efficiency, and profitability analysis.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn secondary" href="mailto:your.email@example.com">Email Parag</a>
+          </div>
+          <div class="tool-strip" aria-label="Core analytics tools">
+            <span>SQL</span>
+            <span>Python</span>
+            <span>Power BI</span>
+            <span>Tableau</span>
+            <span>Excel</span>
+          </div>
+        </div>
+
+        <div class="hero-dashboard" aria-label="Portfolio analytics dashboard preview">
+          <div class="dashboard-topline">
+            <div>
+              <span class="mini-label">Portfolio impact</span>
+              <strong>$8.4M</strong>
+            </div>
+            <div class="status-chip">Ready for GitHub</div>
+          </div>
+          <div class="kpi-grid compact">
+            <div>
+              <span>Projects</span>
+              <strong>5</strong>
+            </div>
+            <div>
+              <span>Dashboards</span>
+              <strong>9</strong>
+            </div>
+            <div>
+              <span>Methods</span>
+              <strong>16</strong>
+            </div>
+          </div>
+          <div class="chart-panel">
+            <div class="chart-header">
+              <span>Revenue trend</span>
+              <strong>+23%</strong>
+            </div>
+            <div class="line-chart" aria-hidden="true">
+              <span style="height: 42%"></span>
+              <span style="height: 56%"></span>
+              <span style="height: 49%"></span>
+              <span style="height: 68%"></span>
+              <span style="height: 61%"></span>
+              <span style="height: 82%"></span>
+              <span style="height: 90%"></span>
+            </div>
+          </div>
+          <div class="insight-list">
+            <div><span></span> Forecasted seasonal demand with 91% accuracy</div>
+            <div><span></span> Identified churn drivers across 4 customer cohorts</div>
+            <div><span></span> Built executive KPI views for weekly decisions</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="kpi-section" aria-label="Portfolio summary metrics">
+        <div class="kpi-card">
+          <span>Business domains</span>
+          <strong data-count="5">0</strong>
+          <p>Sales, customer, marketing, supply chain, finance</p>
+        </div>
+        <div class="kpi-card">
+          <span>Tool coverage</span>
+          <strong data-count="8">0</strong>
+          <p>SQL, Python, Excel, Power BI, Tableau, statistics</p>
+        </div>
+        <div class="kpi-card">
+          <span>Portfolio focus</span>
+          <strong data-count="100">0</strong>
+          <p>Analysis, insight, dashboarding, recommendations</p>
+        </div>
+      </section>
+
+      <section id="projects" class="section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Work</p>
+          <h2>Complex business analysis projects</h2>
+          <p>
+            Each project is written as a polished case study now, with placeholders ready
+            for your real GitHub repos, notebooks, dashboards, and datasets.
+          </p>
+        </div>
+
+        <div class="filter-panel" aria-label="Project filters">
+          <div>
+            <label for="domainFilter">Domain</label>
+            <select id="domainFilter">
+              <option value="all">All domains</option>
+              <option value="sales">Sales</option>
+              <option value="customer">Customer</option>
+              <option value="marketing">Marketing</option>
+              <option value="operations">Operations</option>
+              <option value="finance">Finance</option>
+            </select>
+          </div>
+          <div>
+            <label for="toolFilter">Tool</label>
+            <select id="toolFilter">
+              <option value="all">All tools</option>
+              <option value="sql">SQL</option>
+              <option value="python">Python</option>
+              <option value="excel">Excel</option>
+              <option value="power-bi">Power BI</option>
+              <option value="tableau">Tableau</option>
+            </select>
+          </div>
+          <div>
+            <label for="methodFilter">Method</label>
+            <select id="methodFilter">
+              <option value="all">All methods</option>
+              <option value="forecasting">Forecasting</option>
+              <option value="segmentation">Segmentation</option>
+              <option value="attribution">Attribution</option>
+              <option value="optimization">Optimization</option>
+              <option value="profitability">Profitability</option>
+            </select>
+          </div>
+          <button class="icon-btn" id="resetFilters" type="button" aria-label="Reset project filters" title="Reset filters">
+            &#8635;
+          </button>
+        </div>
+
+        <p class="results-note" id="resultsNote" aria-live="polite">Showing 5 projects</p>
+
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card" data-domain="sales" data-tools="sql python power-bi excel" data-methods="forecasting profitability">
+            <div class="project-top">
+              <span class="project-tag">Sales Analytics</span>
+              <span class="project-score">Impact $3.2M</span>
+            </div>
+            <h3>Sales Performance & Revenue Forecasting</h3>
+            <p>
+              Built a regional revenue model to explain quota gaps, predict next-quarter
+              demand, and prioritize high-margin product categories.
+            </p>
+            <div class="project-chart bars" aria-hidden="true">
+              <span style="height: 48%"></span><span style="height: 62%"></span><span style="height: 58%"></span><span style="height: 76%"></span><span style="height: 88%"></span>
+            </div>
+            <ul class="project-details">
+              <li>Methods: cohort analysis, forecasting, variance analysis</li>
+              <li>Tools: SQL, Python, Power BI, Excel</li>
+              <li>Output: executive dashboard and revenue action plan</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" aria-label="Placeholder GitHub link for sales forecasting project">GitHub placeholder</a>
+              <a href="#" aria-label="Placeholder case study link for sales forecasting project">Case study placeholder</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-domain="customer" data-tools="sql python tableau" data-methods="segmentation">
+            <div class="project-top">
+              <span class="project-tag">Customer Analytics</span>
+              <span class="project-score">Churn -14%</span>
+            </div>
+            <h3>Customer Churn Risk Analysis</h3>
+            <p>
+              Segmented customers by behavior, tenure, support history, and plan usage to
+              identify churn risk and retention opportunities.
+            </p>
+            <div class="donut-row" aria-hidden="true">
+              <div class="donut"></div>
+              <div class="mini-stack">
+                <span><b></b> High risk</span>
+                <span><b></b> Medium risk</span>
+                <span><b></b> Low risk</span>
+              </div>
+            </div>
+            <ul class="project-details">
+              <li>Methods: segmentation, logistic regression, driver analysis</li>
+              <li>Tools: SQL, Python, Tableau</li>
+              <li>Output: churn scoring dashboard and retention playbook</li>
+            </ul>
+            <div class="project-links">
+              <a href="#">GitHub placeholder</a>
+              <a href="#">Dashboard placeholder</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-domain="marketing" data-tools="sql python excel power-bi" data-methods="attribution segmentation">
+            <div class="project-top">
+              <span class="project-tag">Marketing Analytics</span>
+              <span class="project-score">ROAS +31%</span>
+            </div>
+            <h3>Marketing Campaign Attribution</h3>
+            <p>
+              Connected campaign spend, web sessions, leads, and closed deals to compare
+              channel contribution and improve budget allocation.
+            </p>
+            <div class="channel-chart" aria-label="Marketing channel performance">
+              <span style="--value: 82%">Paid Search</span>
+              <span style="--value: 68%">Email</span>
+              <span style="--value: 54%">Social</span>
+            </div>
+            <ul class="project-details">
+              <li>Methods: attribution, funnel analysis, ROI modeling</li>
+              <li>Tools: SQL, Python, Excel, Power BI</li>
+              <li>Output: budget shift recommendation by conversion stage</li>
+            </ul>
+            <div class="project-links">
+              <a href="#">GitHub placeholder</a>
+              <a href="#">Report placeholder</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-domain="operations" data-tools="sql python tableau excel" data-methods="optimization forecasting">
+            <div class="project-top">
+              <span class="project-tag">Operations Analytics</span>
+              <span class="project-score">Cost -18%</span>
+            </div>
+            <h3>Supply Chain Efficiency Dashboard</h3>
+            <p>
+              Analyzed supplier lead times, fulfillment delays, inventory turnover, and
+              stockout patterns to reduce operating waste.
+            </p>
+            <div class="matrix-visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <ul class="project-details">
+              <li>Methods: bottleneck analysis, optimization, service levels</li>
+              <li>Tools: SQL, Python, Tableau, Excel</li>
+              <li>Output: supplier scorecard and exception dashboard</li>
+            </ul>
+            <div class="project-links">
+              <a href="#">GitHub placeholder</a>
+              <a href="#">Dashboard placeholder</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-domain="finance" data-tools="sql excel power-bi" data-methods="profitability forecasting">
+            <div class="project-top">
+              <span class="project-tag">Finance Analytics</span>
+              <span class="project-score">Margin +9%</span>
+            </div>
+            <h3>Financial KPI & Profitability Analysis</h3>
+            <p>
+              Built a profitability view across customers, products, and regions to show
+              margin leakage and recurring performance trends.
+            </p>
+            <div class="waterfall" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <ul class="project-details">
+              <li>Methods: margin bridge, KPI modeling, trend analysis</li>
+              <li>Tools: SQL, Excel, Power BI</li>
+              <li>Output: CFO-ready scorecard and margin improvement plan</li>
+            </ul>
+            <div class="project-links">
+              <a href="#">GitHub placeholder</a>
+              <a href="#">Case study placeholder</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section-band skills-band">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>Analysis toolkit</h2>
+          <p>Technical depth paired with business communication and dashboard design.</p>
+        </div>
+
+        <div class="skills-layout">
+          <div class="skill-group">
+            <h3>Technical Skills</h3>
+            <div class="skill-meter"><span>SQL</span><b style="width: 92%"></b></div>
+            <div class="skill-meter"><span>Python</span><b style="width: 86%"></b></div>
+            <div class="skill-meter"><span>Excel</span><b style="width: 90%"></b></div>
+            <div class="skill-meter"><span>Power BI / Tableau</span><b style="width: 84%"></b></div>
+          </div>
+          <div class="skill-group">
+            <h3>Analysis Methods</h3>
+            <div class="skill-cloud">
+              <span>Forecasting</span>
+              <span>Segmentation</span>
+              <span>Data Cleaning</span>
+              <span>Statistics</span>
+              <span>Dashboarding</span>
+              <span>Storytelling</span>
+              <span>KPI Design</span>
+              <span>A/B Testing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2>How analysis becomes action</h2>
+        </div>
+        <div class="process-grid">
+          <div><span>01</span><h3>Define</h3><p>Clarify the business question, decision owner, success metric, and constraints.</p></div>
+          <div><span>02</span><h3>Clean</h3><p>Profile data quality, join sources, standardize fields, and document assumptions.</p></div>
+          <div><span>03</span><h3>Explore</h3><p>Find patterns, anomalies, drivers, cohorts, seasonality, and root-cause signals.</p></div>
+          <div><span>04</span><h3>Analyze</h3><p>Use statistics, SQL, Python, and BI models to quantify opportunities and risk.</p></div>
+          <div><span>05</span><h3>Visualize</h3><p>Create dashboards and charts that make the recommendation easy to inspect.</p></div>
+          <div><span>06</span><h3>Recommend</h3><p>Translate findings into prioritized actions, tradeoffs, and next measurement steps.</p></div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Ready to replace the placeholders with your real GitHub work.</h2>
+          <p>
+            Add your exact profile links when available. The portfolio structure is ready
+            for notebooks, dashboards, datasets, and project writeups.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/your-username">GitHub placeholder</a>
+          <a href="https://www.linkedin.com/in/your-profile">LinkedIn placeholder</a>
+          <a href="mailto:your.email@example.com">Email placeholder</a>
+          <a href="resume.pdf">Resume placeholder</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Built for GitHub Pages.</span>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
